@@ -727,7 +727,7 @@ select distinct(pemilik) from mobil;
 setelah kamu mengetikkan query diatas selanjutnya klik enter  maka akan muncul tampilan seperti yang di bawah ini yang berarti kamu telah berhasil:
 ![h.distinct.png](ASETBASISDATA/h.distinct.png)
 
-![[h.distinct by order.png]]
+![h.distinct by order.png](ASETBASISDATA/h.distinct%20by%20order.png)
 
 ## Analisis Program ke -1
 Query MySQL `SELECT DISTINCT(pemilik) FROM mobil;` digunakan untuk mengambil daftar unik dari nilai kolom `pemilik` dari tabel `mobil`. Berikut adalah analisis dari perintah query tersebut: 
