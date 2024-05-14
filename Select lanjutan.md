@@ -122,7 +122,7 @@ select * from mobil where harga_rental <=50000;
 ```
 ### Hasil
 **setelah kamu mengetikkan query diatas selanjutnya klik enter  maka akan muncul tampilan seperti yang di bawah ini yang berarti kamu telah berhasil:**
-![h.select lebih kecil.png](ASETBASISDATA/)
+![h.select lebih kecil.png](ASETBASISDATA/h.select%20lebih%20kecil.png)
 ### Analisis
 Query MySQL di atas digunakan untuk mengambil data dari tabel 'mobil' dengan kondisi pencarian dimana harga rental mobil kurang dari atau sama dengan 50,000.
 
@@ -147,7 +147,7 @@ select * from mobil where harga_rental >=50000;
 ```
 ### Hasil
 **setelah kamu mengetikkan query diatas selanjutnya klik enter  maka akan muncul tampilan seperti yang di bawah ini yang berarti kamu telah berhasil:**
-![h.select lebih besar.png](ASETBASISDATA/)
+![h.select lebih besar.png](ASETBASISDATA/h.select%20lebih%20besar.png)
 ### Analisis
 Query MySQL di atas digunakan untuk mengambil data dari tabel 'mobil' dengan kondisi pencarian dimana harga rental mobil lebih besar dari atau sama dengan 50,000.
 
@@ -172,7 +172,7 @@ select * from mobil where harga_rental <>50000;
 
 ### Hasil
 **setelah kamu mengetikkan query diatas selanjutnya klik enter  maka akan muncul tampilan seperti yang di bawah ini yang berarti kamu telah berhasil:**
-![h.select lebih besar-kecil.png](ASETBASISDATA/)
+![h.select lebih besar-kecil.png](ASETBASISDATA/h.select%20lebih%20besar-kecil.png)
 
 ### Analisis
 Query MySQL di atas digunakan untuk mengambil data dari tabel 'mobil' dengan kondisi pencarian dimana harga rental mobil tidak sama dengan 50,000.
@@ -205,8 +205,8 @@ SELECT nama FROM tantangan
 ```
 
 ## Hasil
-![tantangan1.png](ASETBASISDATA/)
-![tantangan2.png](ASETBASISDATA/)
+![tantangan1.png](ASETBASISDATA/tantangan1.png)
+![tantangan2.png](ASETBASISDATA/tantangan2.png)
 
 ## Kesimpulan
 query MySQL "SELECT nama FROM tantangan WHERE nama='raihan';" digunakan untuk memilih nama dari tabel `tantangan` di mana nilainya sama dengan "raihan". Ini merupakan contoh penggunaan klausa `WHERE` untuk melakukan filtrasi data berdasarkan kriteria tertentu. Hasilnya akan berupa nama dari baris-baris yang memenuhi kondisi yang ditentukan. 
@@ -222,7 +222,7 @@ query MySQL "SELECT nama FROM tantangan WHERE nama='raihan';" digunakan untuk me
 ```
 ### Hasil
 **setelah kamu mengetikkan query diatas selanjutnya klik enter  maka akan muncul tampilan seperti yang di bawah ini yang berarti kamu telah berhasil:**
-![h.select in.png](ASETBASISDATA/)
+![h.select in.png](ASETBASISDATA/h.select%20in.png)
 ### Analisis
 Query MySQL di atas digunakan untuk mengambil data dari tabel 'mobil' dengan kondisi pencarian dimana warna mobil adalah 'silver' atau 'merah'.
 
@@ -252,7 +252,7 @@ Query MySQL di atas digunakan untuk mengambil semua data dari tabel 'mobil' dima
 ```
 ### Hasil
 **setelah kamu mengetikkan query diatas selanjutnya klik enter  maka akan muncul tampilan seperti yang di bawah ini yang berarti kamu telah berhasil:**
-![h.select IN+AND.png](ASETBASISDATA/)
+![h.select IN+AND.png](ASETBASISDATA/h.select%20IN+AND.png)
 ### Analisis
 Query MySQL di atas digunakan untuk mengambil data dari tabel 'mobil' dengan dua kondisi pencarian:
 
@@ -285,7 +285,7 @@ Query MySQL di atas digunakan untuk mengambil semua data dari tabel 'mobil' dima
 ```
 ### Hasil
 **setelah kamu mengetikkan query diatas selanjutnya klik enter  maka akan muncul tampilan seperti yang di bawah ini yang berarti kamu telah berhasil:**
-![h.select IN+OR.png](ASETBASISDATA/)
+![h.select IN+OR.png](ASETBASISDATA/h.select%20IN+OR.png)
 ### Analisis
 Query MySQL di atas digunakan untuk mengambil data dari tabel 'mobil' dengan dua kondisi pencarian:
 
@@ -331,9 +331,9 @@ select * from mobil
 
 ## Hasil
 setelah kamu mengetikkan query diatas selanjutnya klik enter  maka akan muncul tampilan seperti yang di bawah ini yang berarti kamu telah berhasil:
-![h.select in+and+operator.png](ASETBASISDATA/)
+![h.select in+and+operator.png](ASETBASISDATA/h.select%20in+and+operator.png)
 
-![h.select in+and+operator.2.png](ASETBASISDATA/)
+![h.select in+and+operator.2.png](ASETBASISDATA/h.select%20in+and+operator.2.png)
 ## Analisis
 Query MySQL pertama digunakan untuk mengambil data dari tabel 'mobil' dengan dua kondisi pencarian:
 
@@ -367,7 +367,7 @@ select * from nama_tabel
 ```
 ## Hasil
 setelah kamu mengetikkan query diatas selanjutnya klik enter  maka akan muncul tampilan seperti yang di bawah ini yang berarti kamu telah berhasil:
-![h.select like.png](ASETBASISDATA/)
+![h.select like.png](ASETBASISDATA/h.select%20like.png)
 ## Analisis
 Select like berikut ini berfungsing untuk mencari semua data dari tabel "mobil" di mana kolom pemilik dimulai dengan awalan 'ib'. 
 
@@ -391,7 +391,7 @@ select * from nama_tabel
 ```
 ## Hasil
 setelah kamu mengetikkan query diatas selanjutnya klik enter  maka akan muncul tampilan seperti yang di bawah ini yang berarti kamu telah berhasil:
-![h.select like 2.png](ASETBASISDATA/)
+![h.select like 2.png](ASETBASISDATA/h.select%20like%202.png)
 ## Analisis
 sama seperti select di atas namun perbedaannya Query tersebut mencari semua data dari tabel "mobil" di mana kolom pemilik dimulai dengan akhiran 'm'.
 
@@ -417,7 +417,7 @@ select * from nama_tabel
 ```
 ## Hasil
 setelah kamu mengetikkan query diatas selanjutnya klik enter  maka akan muncul tampilan seperti yang di bawah ini yang berarti kamu telah berhasil:
-![h.select like3.png](ASETBASISDATA/)
+![h.select like3.png](ASETBASISDATA/h.select%20like3.png)
 ## Analisis
 1. SELECT * FROM mobil`: Perintah ini memilih semua kolom dari tabel  bernama "mobil". 
 2. `WHERE pemilik LIKE 'b%m'`: Ini adalah klausul WHERE yang digunakan untuk memfilter baris berdasarkan pola tertentu di dalam kolom "pemilik". 
@@ -457,9 +457,9 @@ select * from mobil
 ```
 ## Hasil
 setelah kamu mengetikkan query diatas selanjutnya klik enter  maka akan muncul tampilan seperti yang di bawah ini yang berarti kamu telah berhasil:
-![h.select mbtk.png](ASETBASISDATA/)
+![h.select mbtk.png](ASETBASISDATA/h.select%20mbtk.png)
 
-![h.select mbtk 2.png](ASETBASISDATA/)
+![h.select mbtk 2.png](ASETBASISDATA/h.select%20mbtk%202.png)
 
 ## Analisis
 1. `SELECT * FROM mobil`: Perintah ini memilih semua kolom dari tabel bernama "mobil".
@@ -513,7 +513,7 @@ select * from mobil
 setelah kamu mengetikkan query diatas selanjutnya klik enter  maka akan muncul tampilan seperti yang di bawah ini yang berarti kamu telah berhasil:
 ![[h.select kombinasi.png]]
 
-![h.select kombinasi 2.png](ASETBASISDATA/)
+![h.select kombinasi 2.png](ASETBASISDATA/h.select%20kombinasi%202.png)
 
 ## Analisis
 1. `SELECT * FROM mobil`: Perintah ini memilih semua kolom dari tabel bernama "mobil". 
@@ -553,7 +553,7 @@ select * from mobil where peminjam not like 'a%';
 
 ## Hasil
 setelah kamu mengetikkan query diatas selanjutnya klik enter  maka akan muncul tampilan seperti yang di bawah ini yang berarti kamu telah berhasil:
-![h.select not like.png](ASETBASISDATA/)
+![h.select not like.png](ASETBASISDATA/h.select%20not%20like.png)
 ## Analisis
 1. `SELECT * FROM mobil`: Perintah ini memilih semua kolom dari tabel bernama "mobil". 
 2. `WHERE peminjam NOT LIKE 'a%'`: Ini adalah klausul WHERE yang digunakan untuk memfilter baris berdasarkan pola tertentu di dalam kolom "peminjam". 
@@ -577,7 +577,7 @@ select * from mobil where peminjam is null;
 ```
 ### Hasil
 setelah kamu mengetikkan query diatas selanjutnya klik enter  maka akan muncul tampilan seperti yang di bawah ini yang berarti kamu telah berhasil:
-![h.null.png](ASETBASISDATA/)
+![h.null.png](ASETBASISDATA/h.null.png)
 
 ### Analisis
 - Analisis Program
@@ -617,7 +617,7 @@ select * from mobil where peminjam is not null;
 ```
 ### Hasil
 setelah kamu mengetikkan query diatas selanjutnya klik enter  maka akan muncul tampilan seperti yang di bawah ini yang berarti kamu telah berhasil:
-![h.not null.png](ASETBASISDATA/)
+![h.not null.png](ASETBASISDATA/h.not%20null.png)
 
 ### Analisis
 
@@ -657,7 +657,7 @@ select * from mobil order by pemilik asc ;
 ```
 ### Hasil
 setelah kamu mengetikkan query diatas selanjutnya klik enter  maka akan muncul tampilan seperti yang di bawah ini yang berarti kamu telah berhasil:
-![h. order by asc.png](ASETBASISDATA/)
+![h. order by asc.png](ASETBASISDATA/h.%20order%20by%20asc.png)
 ### Analisis
 Query MySQL `SELECT * FROM mobil ORDER BY pemilik ASC;` digunakan untuk mengambil semua data dari tabel `mobil` dan mengurutkannya berdasarkan kolom `pemilik` secara ascending (dari nilai terkecil ke nilai terbesar). Berikut adalah analisis dari query tersebut: 
 
@@ -695,7 +695,7 @@ select * from mobil order by peminjam desc;
 ```
 ### Hasil
 setelah kamu mengetikkan query diatas selanjutnya klik enter  maka akan muncul tampilan seperti yang di bawah ini yang berarti kamu telah berhasil:
-![h. order by desc.png](ASETBASISDATA/)
+![h. order by desc.png](ASETBASISDATA/h.%20order%20by%20desc.png)
 ### Analisis
 Analisis program query tersebut:
 
@@ -725,7 +725,7 @@ select distinct(pemilik) from mobil;
 ```
 ## Hasil
 setelah kamu mengetikkan query diatas selanjutnya klik enter  maka akan muncul tampilan seperti yang di bawah ini yang berarti kamu telah berhasil:
-![h.distinct.png](ASETBASISDATA/)
+![h.distinct.png](ASETBASISDATA/h.distinct.png)
 
 ![[h.distinct by order.png]]
 
@@ -798,7 +798,7 @@ select concat(pemilik,warna) from mobil;
 
 ### Hasil
 setelah kamu mengetikkan query diatas selanjutnya klik enter  maka akan muncul tampilan seperti yang di bawah ini yang berarti kamu telah berhasil:
-![h.concat1.png](ASETBASISDATA/)
+![h.concat1.png](ASETBASISDATA/h.concat1.png)
 ### Analisis
 Perintah MySQL `SELECT CONCAT(pemilik, warna) FROM mobil;` digunakan untuk menggabungkan nilai dari kolom `pemilik` dan `warna` menjadi satu string untuk setiap baris dalam tabel `mobil`. Berikut adalah analisis dari perintah tersebut: 
 
@@ -835,7 +835,7 @@ SELECT CONCAT_WS("-",nama2_kolom) FROM nama_tabel;
 
 ### Hasil
 setelah kamu mengetikkan query diatas selanjutnya klik enter  maka akan muncul tampilan seperti yang di bawah ini yang berarti kamu telah berhasil:
-![h.concat2.png](ASETBASISDATA/)
+![h.concat2.png](ASETBASISDATA/h.concat2.png)
 ### Analisis
 Perintah MySQL `SELECT CONCAT_WS("-", no_plat, no_mesin, id_mobil) FROM mobil;` digunakan untuk menggabungkan nilai dari kolom `no_plat`, `no_mesin`, dan `id_mobil` menjadi satu string, dengan menggunakan tanda hubung "-" sebagai pemisah. Berikut adalah analisis dari perintah tersebut: 
 
@@ -874,7 +874,7 @@ select concat_ws ("+",pemilik,peminjam) as collab from mobil;
 
 ### Hasil
 setelah kamu mengetikkan query diatas selanjutnya klik enter  maka akan muncul tampilan seperti yang di bawah ini yang berarti kamu telah berhasil:
-![h.concat3.png](ASETBASISDATA/)
+![h.concat3.png](ASETBASISDATA/h.concat3.png)
 ### Analisis
 Perintah MySQL `SELECT CONCAT_WS("+", pemilik, peminjam) AS collab FROM mobil;` digunakan untuk menggabungkan nilai dari kolom `pemilik` dan `peminjam` menjadi satu string, dengan tanda tambah "+" sebagai pemisah. Berikut adalah analisis dari perintah tersebut: 
 
@@ -923,7 +923,7 @@ create view info_no_plat as
 
 ### Hasil
 setelah kamu mengetikkan query diatas selanjutnya klik enter  maka akan muncul tampilan seperti yang di bawah ini yang berarti kamu telah berhasil:
-![h.view tabel virtual.png](ASETBASISDATA/)
+![h.view tabel virtual.png](ASETBASISDATA/h.view%20tabel%20virtual.png)
 ### Analisis
 Perintah tersebut membuat sebuah view dengan nama `info_no_plat`. View ini berisi data mobil dengan kondisi bahwa pemiliknya adalah "ibrahim". Berikut adalah analisis dari perintah tersebut:
 
@@ -964,7 +964,7 @@ select * from info_no_plat;
 
 ### Hasil
 setelah kamu mengetikkan query diatas selanjutnya klik enter  maka akan muncul tampilan seperti yang di bawah ini yang berarti kamu telah berhasil:
-![h.view tampilkan tabel virtual.png](ASETBASISDATA/)
+![h.view tampilkan tabel virtual.png](ASETBASISDATA/h.view%20tampilkan%20tabel%20virtual.png)
 ### Analisis
 Perintah `SELECT * FROM info_no_plat;` digunakan untuk menampilkan data dari view yang telah dibuat sebelumnya, yaitu `info_no_plat`. Berikut adalah analisis dari perintah query tersebut:
 
@@ -1000,7 +1000,7 @@ drop view info_no_plat;
 
 ### Hasil
 setelah kamu mengetikkan query diatas selanjutnya klik enter  maka akan muncul tampilan seperti yang di bawah ini yang berarti kamu telah berhasil:
-![h.drop view.png](ASETBASISDATA/)
+![h.drop view.png](ASETBASISDATA/h.drop%20view.png)
 ### Analisis
 Perintah MySQL `DROP VIEW info_no_plat;` digunakan untuk menghapus view yang sebelumnya telah dibuat dengan nama `info_no_plat`. Berikut adalah analisis dari perintah tersebut:
 
@@ -1031,7 +1031,7 @@ create view
 
 
 ### Hasil
-![Pasted image 20240416153428.png](ASETBASISDATA/)
+![Pasted image 20240416153428.png](ASETBASISDATA/Pasted%20image%2020240416153428.png)
 ### Analisis
 Perintah query MySQL di atas membuat sebuah view dengan nama `mobil_tanpa_peminjam`. Berikut adalah analisisnya:
 -  **Pembuatan View**:
@@ -1072,7 +1072,7 @@ UPDATE mobil
 ```
 
 ### Hasil
-![Materi alter/asetbs/h.tantangan.png](ASETBASISDATA/)
+![h.tantangan.png](ASETBASISDATA/h.tantangan.png)
   
 ### Kesimpulan
 
@@ -1119,7 +1119,7 @@ SELECT SUM(harga_rental) FROM mobil;
 ```
 
 ### Hasil
-![h.sum.jpg.png](ASETBASISDATA/)
+![h.sum.jpg.png](ASETBASISDATA/h.sum.jpg.png)
   
 
 ### Kesimpulan
@@ -1155,7 +1155,7 @@ SELECT COUNT(pemilik) FROM mobil;
 ```
 
 ### Hasil
-![h.count.png](ASETBASISDATA/)
+![h.count.png](ASETBASISDATA/h.count.png)
   
 
 ### Kesimpulan
@@ -1192,7 +1192,7 @@ SELECT MIN(harga_rental) AS MINIMAL FROM mobil;
 ```
 
 ### Hasil
-![h.min.png](ASETBASISDATA/)
+![h.min.png](ASETBASISDATA/h.min.png)
   
 
 ### Kesimpulan
@@ -1229,7 +1229,7 @@ SELECT MAX(harga_rental) AS MAXIMAL FROM mobil;
 ```
 
 ### Hasil
-![h.max.png](ASETBASISDATA/)
+![h.max.png](ASETBASISDATA/h.max.png)
   
 
 ### Kesimpulan
@@ -1266,7 +1266,7 @@ SELECT AVG(harga_rental) AS RATA_RATA FROM mobil;
 ```
 
 ### Hasil
-![h.avg.png](ASETBASISDATA/)
+![h.avg.png](ASETBASISDATA/h.avg.png)
   
 
 ### Kesimpulan
