@@ -30,7 +30,27 @@ select warna,pemilik from mobil where warna="HITAM" and pemilik='Ibrahim'
 **setelah kamu mengetikkan query diatas selanjutnya klik enter  maka akan muncul tampilan seperti yang di bawah ini yang berarti kamu telah berhasil:**
 ![h.select and.png](ASETBASISDATA/h.select%20and.png)
 ### Analisis
-Perintah SQL di atas merupakan sebuah query yang digunakan untuk mengambil data dari tabel 'mobil'. Query tersebut memiliki dua kondisi pencarian, yaitu warna mobil yang harus sama dengan "`HITAM"` dan pemilik mobil yang harus sama dengan "`Ibrahim"`. Dalam query tersebut, dipilih dua kolom yaitu `'warna'` dan `'pemilik'.` Jadi, hasil dari query tersebut akan menampilkan semua mobil dengan warna hitam yang dimiliki oleh seseorang dengan nama Ibrahim.
+analisis kode Query 
+SELECT warna, pemilik: Bagian ini menentukan kolom-kolom yang akan diambil dari tabel. Dalam hal ini, kolom "warna" dan "pemilik" akan diambil dari tabel "mobil".
+
+FROM mobil: Bagian ini menentukan tabel dari mana data akan diambil, yaitu tabel "mobil".
+
+WHERE warna="HITAM" AND pemilik='Ibrahim': Bagian ini menetapkan kondisi yang harus dipenuhi oleh baris-baris yang diambil. Hanya baris-baris di mana nilai kolom "warna" adalah "HITAM" dan nilai kolom "pemilik" adalah 'Ibrahim' yang akan diambil.
+
+Pemilihan Kolom: Query ini memilih dua kolom dari tabel mobil, yaitu warna dan pemilik.
+
+Kondisi Seleksi: Query ini menggunakan klausa WHERE dengan dua kondisi:
+
+warna="HITAM": Memilih hanya baris-baris di mana warna mobil adalah "HITAM".
+pemilik='Ibrahim': Memilih hanya baris-baris di mana pemilik mobil adalah "Ibrahim".
+
+Penggunaan Operator AND: Kondisi AND memastikan bahwa hanya baris yang memenuhi kedua kondisi tersebut akan dipilih. Artinya, hanya mobil yang berwarna hitam dan dimiliki oleh Ibrahim yang akan dimasukkan dalam hasil query.
+
+Hasil Query: Hasil query ini akan menampilkan daftar mobil yang berwarna hitam dan dimiliki oleh Ibrahim, termasuk informasi tentang warna (selalu "HITAM") dan pemilik (selalu "Ibrahim").
+
+Tujuan: Tujuan dari query ini adalah untuk mengidentifikasi mobil-mobil dengan kriteria spesifik (warna hitam dan pemilik Ibrahim). Ini bisa digunakan untuk analisis data, pelaporan, atau kebutuhan informasi spesifik terkait mobil-mobil tersebut.
+
+
 ### Kesimpulan
 Perintah SQL di atas merupakan sebuah query yang digunakan untuk mengambil data dari tabel `'mobil'`. Query tersebut memiliki dua kondisi pencarian, yaitu warna mobil yang harus sama dengan `"HITAM"` dan pemilik mobil yang harus sama dengan `"Ibrahim".` Dalam query tersebut, dipilih dua kolom yaitu `'warna'` dan `'pemilik'.` Jadi, hasil dari query tersebut akan menampilkan semua mobil dengan warna hitam yang dimiliki oleh seseorang dengan nama Ibrahim.
 # Select OR
