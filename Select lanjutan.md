@@ -1118,6 +1118,7 @@ select * from info_no_plat;
 
 ### Hasil
 setelah kamu mengetikkan query diatas selanjutnya klik enter  maka akan muncul tampilan seperti yang di bawah ini yang berarti kamu telah berhasil:
+
 ![h.view tampilkan tabel virtual.png](ASETBASISDATA/h.view%20tampilkan%20tabel%20virtual.png)
 ### Analisis
 Perintah `SELECT * FROM info_no_plat;` digunakan untuk menampilkan data dari view yang telah dibuat sebelumnya, yaitu `info_no_plat`. Berikut adalah analisis dari perintah query tersebut:
@@ -1247,15 +1248,19 @@ Dengan membuat view untuk kueri yang sering digunakan, Anda dapat menghindari pe
 ## SUM
 
 ### Penjelasan
-Query MySQL di atas adalah sebuah perintah untuk menghitung jumlah total dari kolom `harga_rental` dari tabel `mobil`. Ini menggunakan fungsi agregat `SUM()` untuk menjumlahkan nilai-nilai di kolom `harga_rental`.
+Pemilihan Kolom Tertentu: Query ini menggunakan fungsi agregat SUM untuk menghitung total nilai kolom harga_rental dari tabel mobil.
 
-Analisis program query tersebut:
+Fungsi Agregat SUM: Fungsi SUM dijalankan pada kolom harga_rental untuk menjumlahkan semua nilai yang ada di kolom tersebut.
 
-1. **SELECT**: Kata kunci ini menunjukkan bahwa kita ingin memilih data dari tabel.
-2. **SUM(harga_rental)**: Ini adalah fungsi agregat yang akan menjumlahkan semua nilai dalam kolom `harga_rental`.
-3. **FROM mobil**: Ini menunjukkan bahwa data yang dipilih berasal dari tabel bernama `mobil`.
-  
+Fungsi SUM menghitung total akumulasi dari semua angka dalam kolom harga_rental.
+Hasil Query:
 
+Hasil dari query ini adalah satu nilai yang merupakan total dari semua nilai dalam kolom harga_rental.
+Query ini akan mengembalikan satu baris dengan satu kolom yang berisi total keseluruhan dari nilai harga_rental untuk semua baris dalam tabel mobil.
+Tujuan Query:
+
+Query ini bertujuan untuk mendapatkan jumlah total pendapatan atau biaya sewa dari semua mobil yang tercatat dalam tabel mobil.
+Ini bisa digunakan untuk analisis keuangan, laporan pendapatan, atau tujuan lain di mana total dari nilai harga_rental diperlukan.
 ### Struktur Query
 
 ```mysql
@@ -1284,14 +1289,19 @@ Kesimpulannya, query MySQL "SELECT SUM(harga_rental) FROM mobil;" digunakan untu
 ## Count
 
 ### Penjelasan
-Query MySQL di atas bertujuan untuk menghitung jumlah baris di kolom `pemilik` dari tabel `mobil`.
+Pemilihan Kolom Tertentu: Query ini menggunakan fungsi agregat COUNT untuk menghitung jumlah nilai yang tidak NULL dalam kolom nama_kolom dari tabel nama_tabel.
 
-Analisis program query tersebut:
+Fungsi Agregat COUNT: Fungsi COUNT dijalankan pada kolom nama_kolom untuk menghitung semua baris di mana nama_kolom tidak NULL.
 
-1. **SELECT**: Kata kunci ini menunjukkan bahwa kita ingin memilih data dari tabel.
-2. **COUNT(pemilik)**: Ini adalah fungsi agregat yang akan menghitung jumlah baris di kolom `pemilik`.
-3. **FROM mobil**: Ini menunjukkan bahwa data yang dipilih berasal dari tabel bernama `mobil`.
-  
+Fungsi COUNT(nama_kolom) menghitung jumlah baris yang memiliki nilai dalam kolom nama_kolom, sehingga nilai NULL tidak akan dihitung.
+Hasil Query:
+
+Hasil dari query ini adalah satu nilai yang merupakan jumlah dari semua baris di mana nama_kolom memiliki nilai yang tidak NULL.
+Query ini akan mengembalikan satu baris dengan satu kolom yang berisi jumlah dari baris-baris yang memenuhi kriteria tersebut.
+Tujuan Query:
+
+Query ini bertujuan untuk menghitung jumlah baris di mana kolom nama_kolom memiliki nilai yang tidak NULL.
+Ini bisa digunakan untuk menghitung jumlah entri atau record yang valid dalam kolom tertentu dari tabel nama_tabel.
 
 ### Struktur Query
 
@@ -1321,15 +1331,25 @@ Kesimpulannya, query MySQL "SELECT COUNT(pemilik) FROM mobil;" digunakan untuk m
 ## MIN
 
 ### Penjelasan
-Query MySQL di atas bertujuan untuk mencari nilai terkecil (minimum) dari kolom `harga_rental` dari tabel `mobil`. Selain itu, query juga memberikan nama alias "MINIMAL" pada hasil minimum tersebut.
+Pemilihan Kolom Tertentu: Query ini memilih nilai minimum dari kolom harga_rental dari tabel mobil dan menamakannya sebagai MINIMAL.
 
-Analisis program query tersebut:
+Fungsi Agregat MIN: Fungsi MIN digunakan untuk menemukan nilai terkecil dalam kolom harga_rental.
 
-1. **SELECT**: Kata kunci ini menunjukkan bahwa kita ingin memilih data dari tabel.
-2. **MIN(harga_rental)**: Ini adalah fungsi agregat yang akan mencari nilai terkecil dari kolom `harga_rental`.
-3. **AS MINIMAL**: Ini memberikan nama alias "MINIMAL" pada hasil minimum yang ditemukan.
-4. **FROM mobil**: Ini menunjukkan bahwa data yang dipilih berasal dari tabel bernama `mobil`.
-  
+Fungsi MIN(harga_rental) mengembalikan nilai terendah dari semua nilai yang ada di kolom harga_rental.
+Penamaan Kolom Hasil: Alias AS MINIMAL digunakan untuk memberikan nama kolom hasil sebagai MINIMAL.
+
+Ini membantu dalam memberikan nama yang lebih deskriptif untuk kolom hasil, yang berguna untuk pemahaman dan pengolahan data lebih lanjut.
+Eksekusi Query:
+
+Database mencari nilai terkecil dalam kolom harga_rental dari semua baris dalam tabel mobil.
+Hasilnya adalah satu baris dengan satu kolom bernama MINIMAL, yang berisi nilai minimum dari kolom harga_rental.
+Hasil Query:
+
+Hasil dari query ini akan mencakup satu nilai yang merupakan nilai terendah dari semua nilai yang ada di kolom harga_rental.
+Tujuan Query:
+
+Query ini bertujuan untuk mengetahui harga rental terendah dari semua mobil yang tercatat dalam tabel mobil.
+Ini berguna untuk analisis harga, menentukan rentang harga, dan mengidentifikasi opsi termurah yang tersedia dalam dataset.
 
 ### Struktur Query
 
@@ -1359,15 +1379,25 @@ Kesimpulannya, query MySQL "SELECT MIN(harga_rental) AS MINIMAL FROM mobil;" dig
 ## MAX
 
 ### Penjelasan
-Query MySQL di atas bertujuan untuk mencari nilai terbesar (maksimum) dari kolom `harga_rental` dalam tabel `mobil`. Selain itu, query juga memberikan nama alias "MAXIMAL" pada hasil maksimum tersebut.
+Pemilihan Kolom Tertentu: Query ini memilih nilai maksimum dari kolom harga_rental dari tabel mobil dan menamakannya sebagai MAXIMAL.
 
-Analisis program query tersebut:
+Fungsi Agregat MAX: Fungsi MAX digunakan untuk menemukan nilai terbesar dalam kolom harga_rental.
 
-1. **SELECT**: Kata kunci ini menunjukkan bahwa kita ingin memilih data dari tabel.
-2. **MAX(harga_rental)**: Ini adalah fungsi agregat yang akan mencari nilai terbesar dari kolom `harga_rental`.
-3. **AS MAXIMAL**: Ini memberikan nama alias "MAXIMAL" pada hasil maksimum yang ditemukan.
-4. **FROM mobil**: Ini menunjukkan bahwa data yang dipilih berasal dari tabel bernama `mobil`.
-  
+Fungsi MAX(harga_rental) mengembalikan nilai tertinggi dari semua nilai yang ada di kolom harga_rental.
+Penamaan Kolom Hasil: Alias AS MAXIMAL digunakan untuk memberikan nama kolom hasil sebagai MAXIMAL.
+
+Ini membantu dalam memberikan nama yang lebih deskriptif untuk kolom hasil, yang berguna untuk pemahaman dan pengolahan data lebih lanjut.
+Eksekusi Query:
+
+Database mencari nilai tertinggi dalam kolom harga_rental dari semua baris dalam tabel mobil.
+Hasilnya adalah satu baris dengan satu kolom bernama MAXIMAL, yang berisi nilai maksimum dari kolom harga_rental.
+Hasil Query:
+
+Hasil dari query ini akan mencakup satu nilai yang merupakan nilai tertinggi dari semua nilai yang ada di kolom harga_rental.
+Tujuan Query:
+
+Query ini bertujuan untuk mengetahui harga rental tertinggi dari semua mobil yang tercatat dalam tabel mobil.
+Ini berguna untuk analisis harga, menentukan rentang harga, dan mengidentifikasi opsi termahal yang tersedia dalam dataset.
 
 ### Struktur Query
 
@@ -1397,15 +1427,25 @@ Kesimpulannya, query MySQL "SELECT MAX(harga_rental) AS MAXIMAL FROM mobil;" ber
 ## AVG
 
 ### Penjelasan
-Query MySQL di atas bertujuan untuk menghitung rata-rata (average) dari nilai-nilai dalam kolom `harga_rental` dari tabel `mobil`. Selain itu, query juga memberikan nama alias "RATA_RATA" pada hasil rata-rata tersebut.
+Pemilihan Kolom Tertentu: Query ini menggunakan fungsi agregat AVG untuk menghitung nilai rata-rata dari kolom harga_rental dari tabel mobil.
 
-Analisis program query tersebut:
+Fungsi Agregat AVG: Fungsi AVG digunakan untuk menghitung nilai rata-rata dari semua nilai dalam kolom harga_rental.
 
-1. **SELECT**: Kata kunci ini menunjukkan bahwa kita ingin memilih data dari tabel.
-2. **AVG(harga_rental)**: Ini adalah fungsi agregat yang akan menghitung rata-rata dari nilai-nilai dalam kolom `harga_rental`.
-3. **AS RATA_RATA**: Ini memberikan nama alias "RATA_RATA" pada hasil rata-rata yang dihitung.
-4. **FROM mobil**: Ini menunjukkan bahwa data yang dipilih berasal dari tabel bernama `mobil`.
-  
+Fungsi AVG(harga_rental) mengembalikan rata-rata dari semua nilai yang ada di kolom harga_rental.
+Penamaan Kolom Hasil: Alias AS RATA_RATA digunakan untuk memberikan nama kolom hasil sebagai RATA_RATA.
+
+Ini membantu dalam memberikan nama yang lebih deskriptif untuk kolom hasil, yang berguna untuk pemahaman dan pengolahan data lebih lanjut.
+Eksekusi Query:
+
+Database menghitung nilai rata-rata dari semua nilai dalam kolom harga_rental dari semua baris dalam tabel mobil.
+Hasilnya adalah satu baris dengan satu kolom bernama RATA_RATA, yang berisi nilai rata-rata dari kolom harga_rental.
+Hasil Query:
+
+Hasil dari query ini akan mencakup satu nilai yang merupakan nilai rata-rata dari semua nilai yang ada di kolom harga_rental.
+Tujuan Query:
+
+Query ini bertujuan untuk mengetahui rata-rata harga rental dari semua mobil yang tercatat dalam tabel mobil.
+Ini berguna untuk mendapatkan pemahaman tentang harga rata-rata mobil dalam dataset dan dapat digunakan untuk perbandingan atau analisis lebih lanjut.
 
 ### Struktur Query
 
