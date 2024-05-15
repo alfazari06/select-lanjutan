@@ -31,7 +31,6 @@ select warna,pemilik from mobil where warna="HITAM" and pemilik='Ibrahim'
 ![h.select and.png](ASETBASISDATA/h.select%20and.png)
 ### Analisis
 analisis kode Query
-
 SELECT warna, pemilik: Bagian ini menentukan kolom-kolom yang akan diambil dari tabel. Dalam hal ini, kolom "warna" dan "pemilik" akan diambil dari tabel "mobil".
 
 FROM mobil: Bagian ini menentukan tabel dari mana data akan diambil, yaitu tabel "mobil".
@@ -69,10 +68,28 @@ select warna,pemilik from mobil where warna='HITAM' or pemilik='ibrahim';
 ![h.select OR.png](ASETBASISDATA/h.select%20OR.png)
 
 ### Analisis
-1. Mengambil data mobil dengan warna `"HITAM".`
-2. Mengambil data mobil yang dimiliki oleh seseorang dengan nama "Ibrahim". 
+Pemilihan Kolom: Query ini memilih dua kolom dari tabel mobil, yaitu warna dan pemilik.
 
-    Ketika salah satu kondisi atau kedua kondisi tersebut terpenuhi, data akan dipilih. Setelah itu, query tersebut memilih dua kolom, yaitu `'warna'` dan `'pemilik'`, dari tabel `'mobil'`. Jadi, hasil dari query tersebut akan menampilkan semua mobil dengan warna hitam dan semua mobil yang dimiliki oleh seseorang dengan nama `"Ibrahim"`.
+Kondisi Filter: Query ini menggunakan klausa WHERE dengan dua kondisi yang digabungkan menggunakan operator OR:
+
+warna='HITAM': Memfilter hasil untuk menyertakan baris di mana kolom warna bernilai 'HITAM'.
+pemilik='ibrahim': Memfilter hasil untuk menyertakan baris di mana kolom pemilik bernilai 'ibrahim'.
+Penggunaan Operator OR: Operator OR memastikan bahwa setiap baris yang memenuhi salah satu dari kedua kondisi tersebut akan disertakan dalam hasil query. Artinya:
+
+Baris-baris di mana kolom warna bernilai 'HITAM' akan disertakan, tanpa memperhatikan nilai kolom pemilik.
+Baris-baris di mana kolom pemilik bernilai 'ibrahim' akan disertakan, tanpa memperhatikan nilai kolom warna.
+Eksekusi Query:
+
+Database mencari semua baris dalam tabel mobil yang memiliki nilai warna sebagai 'HITAM'.
+Database juga mencari semua baris yang memiliki nilai pemilik sebagai 'ibrahim'.
+Baris yang memenuhi salah satu atau kedua kondisi tersebut akan dimasukkan dalam hasil.
+Hasil Query: Hasil dari query ini adalah sekumpulan baris yang memenuhi salah satu dari dua kondisi:
+
+Mobil-mobil yang berwarna hitam.
+Mobil-mobil yang dimiliki oleh Ibrahim.
+Baris yang memenuhi kedua kondisi (mobil berwarna hitam dan dimiliki oleh Ibrahim) akan muncul sekali dalam hasil.
+Tujuan Query: Tujuan dari query ini adalah untuk mendapatkan informasi tentang mobil-mobil yang berwarna hitam atau dimiliki oleh Ibrahim. Ini dapat digunakan untuk analisis data, laporan, atau kebutuhan informasi lainnya di mana fleksibilitas dalam kondisi pencarian diperlukan.
+
 ### Kesimpulan
 Query MySQL di atas mengambil data dari tabel `'mobil'` dengan dua kondisi pencarian:
 
@@ -95,14 +112,22 @@ select * from mobil where harga_rental between 100000 and 200000;
 **setelah kamu mengetikkan query diatas selanjutnya klik enter  maka akan muncul tampilan seperti yang di bawah ini yang berarti kamu telah berhasil:**
 ![h.select between.png](ASETBASISDATA/h.select%20between.png)
 ### Analisis
-Query MySQL di atas digunakan untuk mengambil data dari tabel 'mobil' dengan kondisi pencarian menggunakan klausa BETWEEN untuk kolom 'harga_rental'. Klausa BETWEEN digunakan untuk menentukan rentang nilai yang akan dicari.
+Perintah query MySQL SELECT * FROM mobil WHERE harga_rental BETWEEN 100000 AND 200000; digunakan untuk mengekstrak data dari tabel mobil berdasarkan rentang harga rental. Berikut adalah analisis dari query tersebut:
 
+Pemilihan Semua Kolom: Query ini memilih semua kolom dari tabel mobil menggunakan SELECT *.
 
--  SELECT *: Mengambil semua kolom dari tabel 'mobil'.
--  FROM mobil: Menentukan tabel yang akan diambil datanya, yaitu 'mobil'.
--  WHERE harga_rental BETWEEN 100000 AND 200000: Menentukan kondisi pencarian dimana harga_rental harus berada dalam rentang antara 100,000 dan 200,000.
+Kondisi Filter dengan BETWEEN:
 
-Jadi, hasil dari query ini akan menampilkan semua data mobil yang memiliki harga rental di antara 100,000 dan 200,000.
+Klausa WHERE harga_rental BETWEEN 100000 AND 200000 digunakan untuk memfilter hasil berdasarkan nilai kolom harga_rental.
+Operator BETWEEN mencakup kedua batas rentang yang diberikan, sehingga baris dengan nilai harga_rental sebesar 100000 dan 200000 juga akan disertakan dalam hasil.
+Eksekusi Query:
+
+Database mencari semua baris dalam tabel mobil di mana nilai kolom harga_rental berada dalam rentang 100000 hingga 200000, termasuk kedua nilai batas.
+Semua kolom dari baris-baris yang memenuhi kondisi ini akan disertakan dalam hasil.
+Hasil Query: Hasil dari query ini akan mencakup semua data mobil (semua kolom) yang memiliki nilai harga_rental di antara 100000 dan 200000.
+
+Tujuan Query: Tujuan dari query ini adalah untuk mendapatkan daftar mobil yang harga rentalnya berada dalam rentang tertentu. Ini berguna untuk analisis, laporan, atau keperluan lain di mana informasi tentang mobil-mobil dengan harga rental tertentu diperlukan.
+
 ### Kesimpulan
 Query MySQL di atas mengambil semua data dari tabel 'mobil' dimana harga rental mobil berada dalam rentang antara 100,000 dan 200,000. Ini berarti query tersebut akan menghasilkan daftar semua mobil yang memiliki harga rental antara 100,000 dan 200,000.
 # Select Not Between
@@ -120,15 +145,22 @@ select * from mobil where harga_rental not between 100000 and 200000;
 **setelah kamu mengetikkan query diatas selanjutnya klik enter  maka akan muncul tampilan seperti yang di bawah ini yang berarti kamu telah berhasil:**
 ![h.select not between.png](ASETBASISDATA/h.select%20not%20between.png)
 ### Analisis
-Query MySQL di atas digunakan untuk mengambil data dari tabel 'mobil' dengan kondisi pencarian menggunakan klausa NOT BETWEEN untuk kolom 'harga_rental'. Klausa NOT BETWEEN digunakan untuk mengecualikan rentang nilai yang akan dicari.
+Perintah query MySQL SELECT * FROM mobil WHERE harga_rental NOT BETWEEN 100000 AND 200000; digunakan untuk mengekstrak data dari tabel mobil yang memiliki harga rental di luar rentang tertentu. Berikut adalah analisis dari query tersebut:
 
+Pemilihan Semua Kolom: Query ini memilih semua kolom dari tabel mobil menggunakan SELECT *.
 
-**Adapun poin" yang dapat saya ambil adalah :**
--  SELECT *: Mengambil semua kolom dari tabel 'mobil'.
--  FROM mobil: Menentukan tabel yang akan diambil datanya, yaitu 'mobil'.
--  WHERE harga_rental NOT BETWEEN 100000 AND 200000: Menentukan kondisi pencarian dimana harga_rental tidak berada dalam rentang antara 100,000 dan 200,000.
+Kondisi Filter dengan NOT BETWEEN:
 
-Jadi, hasil dari query ini akan menampilkan semua data mobil yang memiliki harga rental diluar rentang antara 100,000 dan 200,000.
+Klausa WHERE harga_rental NOT BETWEEN 100000 AND 200000 digunakan untuk memfilter hasil berdasarkan nilai kolom harga_rental.
+Operator NOT BETWEEN mencakup semua nilai yang berada di luar rentang yang ditentukan, yaitu kurang dari 100000 atau lebih dari 200000.
+Eksekusi Query:
+
+Database mencari semua baris dalam tabel mobil di mana nilai kolom harga_rental tidak berada dalam rentang 100000 hingga 200000.
+Semua kolom dari baris-baris yang memenuhi kondisi ini akan disertakan dalam hasil.
+Hasil Query: Hasil dari query ini akan mencakup semua data mobil (semua kolom) yang memiliki nilai harga_rental di luar rentang 100000 hingga 200000.
+
+Tujuan Query: Tujuan dari query ini adalah untuk mendapatkan daftar mobil yang harga rentalnya tidak berada dalam rentang tertentu. Ini berguna untuk analisis, laporan, atau keperluan lain di mana informasi tentang mobil-mobil dengan harga rental di luar batas tertentu diperlukan.
+
 ### Kesimpulan
 Query MySQL di atas digunakan untuk mengambil semua data dari tabel 'mobil' dimana harga rental mobil tidak berada dalam rentang antara 100,000 dan 200,000. Dengan kata lain, query tersebut akan menampilkan semua mobil yang memiliki harga rental di luar rentang tersebut.
 # Select <=
@@ -145,14 +177,20 @@ select * from mobil where harga_rental <=50000;
 **setelah kamu mengetikkan query diatas selanjutnya klik enter  maka akan muncul tampilan seperti yang di bawah ini yang berarti kamu telah berhasil:**
 ![h.select lebih kecil.png](ASETBASISDATA/h.select%20lebih%20kecil.png)
 ### Analisis
-Query MySQL di atas digunakan untuk mengambil data dari tabel 'mobil' dengan kondisi pencarian dimana harga rental mobil kurang dari atau sama dengan 50,000.
+Pemilihan Semua Kolom: Query ini memilih semua kolom dari tabel mobil menggunakan SELECT *.
 
-**Adapun poin" yang dapat saya ambil adalah :**
-- SELECT *: Mengambil semua kolom dari tabel 'mobil'.
-- FROM mobil: Menentukan tabel yang akan diambil datanya, yaitu 'mobil'.
--  WHERE harga_rental <= 50000: Menentukan kondisi pencarian dimana harga_rental mobil harus kurang dari atau sama dengan 50,000.
+Kondisi Filter dengan <=:
 
-Jadi, hasil dari query ini akan menampilkan semua data mobil yang memiliki harga rental kurang dari atau sama dengan 50,000.
+Klausa WHERE harga_rental <= 50000 digunakan untuk memfilter hasil berdasarkan nilai kolom harga_rental.
+Operator <= memastikan bahwa hanya baris-baris yang memiliki nilai harga_rental kurang dari atau sama dengan 50.000 yang akan disertakan dalam hasil.
+Eksekusi Query:
+
+Database mencari semua baris dalam tabel mobil di mana nilai kolom harga_rental kurang dari atau sama dengan 50.000.
+Semua kolom dari baris-baris yang memenuhi kondisi ini akan disertakan dalam hasil.
+Hasil Query: Hasil dari query ini akan mencakup semua data mobil (semua kolom) yang memiliki nilai harga_rental kurang dari atau sama dengan 50.000.
+
+Tujuan Query: Tujuan dari query ini adalah untuk mendapatkan daftar mobil yang harga rentalnya terjangkau (kurang dari atau sama dengan 50.000). Ini bisa digunakan untuk analisis, pelaporan, atau keperluan lainnya di mana informasi tentang mobil-mobil dengan harga rental yang lebih rendah diperlukan.
+
 ### Kesimpulan
 Query MySQL di atas digunakan untuk mengambil semua data dari tabel 'mobil' dimana harga rental mobil kurang dari atau sama dengan 50,000. Ini berarti query tersebut akan menghasilkan daftar semua mobil yang memiliki harga rental kurang dari atau sama dengan 50,000.
 
@@ -170,14 +208,21 @@ select * from mobil where harga_rental >=50000;
 **setelah kamu mengetikkan query diatas selanjutnya klik enter  maka akan muncul tampilan seperti yang di bawah ini yang berarti kamu telah berhasil:**
 ![h.select lebih besar.png](ASETBASISDATA/h.select%20lebih%20besar.png)
 ### Analisis
-Query MySQL di atas digunakan untuk mengambil data dari tabel 'mobil' dengan kondisi pencarian dimana harga rental mobil lebih besar dari atau sama dengan 50,000.
+Pemilihan Semua Kolom: Query ini memilih semua kolom dari tabel mobil menggunakan SELECT *.
 
-**Adapun poin" yang dapat saya ambil adalah :**
-- SELECT *: Mengambil semua kolom dari tabel 'mobil'.
-- FROM mobil: Menentukan tabel yang akan diambil datanya, yaitu 'mobil'.
-- WHERE harga_rental >= 50000: Menentukan kondisi pencarian dimana harga_rental mobil harus lebih besar dari atau sama dengan 50,000.
+Kondisi Filter dengan >=:
 
-Jadi, hasil dari query ini akan menampilkan semua data mobil yang memiliki harga rental lebih besar dari atau sama dengan 50,000.
+Klausa WHERE harga_rental >= 50000 digunakan untuk memfilter hasil berdasarkan nilai kolom harga_rental.
+Operator >= memastikan bahwa hanya baris-baris yang memiliki nilai harga_rental lebih besar dari atau sama dengan 50.000 yang akan disertakan dalam hasil.
+Eksekusi Query:
+
+Database mencari semua baris dalam tabel mobil di mana nilai kolom harga_rental lebih besar dari atau sama dengan 50.000.
+Semua kolom dari baris-baris yang memenuhi kondisi ini akan disertakan dalam hasil.
+Hasil Query: Hasil dari query ini akan mencakup semua data mobil (semua kolom) yang memiliki nilai harga_rental lebih besar dari atau sama dengan 50.000.
+
+Tujuan Query: Tujuan dari query ini adalah untuk mendapatkan daftar mobil yang harga rentalnya lebih tinggi atau sama dengan 50.000. Ini bisa digunakan untuk analisis, pelaporan, atau keperluan lainnya di mana informasi tentang mobil-mobil dengan harga rental yang lebih tinggi diperlukan.
+
+
 ### Kesimpulan
 Query MySQL di atas digunakan untuk mengambil semua data dari tabel 'mobil' dimana harga rental mobil lebih besar dari atau sama dengan 50,000. Ini berarti query tersebut akan menghasilkan daftar semua mobil yang memiliki harga rental lebih besar dari atau sama dengan 50,000.
 # Select <> atau !=
@@ -196,24 +241,42 @@ select * from mobil where harga_rental <>50000;
 ![h.select lebih besar-kecil.png](ASETBASISDATA/h.select%20lebih%20besar-kecil.png)
 
 ### Analisis
-Query MySQL di atas digunakan untuk mengambil data dari tabel 'mobil' dengan kondisi pencarian dimana harga rental mobil tidak sama dengan 50,000.
+Perintah query MySQL SELECT * FROM mobil WHERE harga_rental <> 50000; digunakan untuk mengekstrak data dari tabel mobil yang memiliki harga rental tidak sama dengan 50.000. Berikut adalah analisis dari query tersebut:
 
-**Adapun poin" yang dapat saya ambil adalah :**
-- SELECT *: Mengambil semua kolom dari tabel 'mobil'.
-- FROM mobil: Menentukan tabel yang akan diambil datanya, yaitu 'mobil'.
-- WHERE harga_rental <> 50000: Menentukan kondisi pencarian dimana harga_rental mobil tidak sama dengan 50,000.
+Pemilihan Semua Kolom: Query ini memilih semua kolom dari tabel mobil menggunakan SELECT *.
 
-Jadi, hasil dari query ini akan menampilkan semua data mobil yang memiliki harga rental yang tidak sama dengan 50,000.
+Kondisi Filter dengan <>:
+
+Klausa WHERE harga_rental <> 50000 digunakan untuk memfilter hasil berdasarkan nilai kolom harga_rental.
+Operator <> (tidak sama dengan) memastikan bahwa hanya baris-baris yang memiliki nilai harga_rental berbeda dengan 50.000 yang akan disertakan dalam hasil.
+Eksekusi Query:
+
+Database mencari semua baris dalam tabel mobil di mana nilai kolom harga_rental tidak sama dengan 50.000.
+Semua kolom dari baris-baris yang memenuhi kondisi ini akan disertakan dalam hasil.
+Hasil Query: Hasil dari query ini akan mencakup semua data mobil (semua kolom) yang memiliki nilai harga_rental tidak sama dengan 50.000.
+
+Tujuan Query: Tujuan dari query ini adalah untuk mendapatkan daftar mobil yang harga rentalnya tidak sama dengan 50.000. Ini bisa digunakan untuk analisis, pelaporan, atau keperluan lainnya di mana informasi tentang mobil-mobil dengan harga rental yang berbeda diperlukan.
+
 ### Kesimpulan
 Query MySQL di atas digunakan untuk mengambil semua data dari tabel 'mobil' dimana harga rental mobil tidak sama dengan 50,000. Ini berarti query tersebut akan menghasilkan daftar semua mobil yang memiliki harga rental yang berbeda dari 50,000.
 
 # Tantangan login
 
 ## Penjelasan
+Pemilihan Kolom: Query ini memilih kolom nama dari tabel tantangan.
 
-`SELECT nama FROM tantangan` : merupakan perintah SQL untuk mencari kolom nama yang berada di tabel tantangan.
+Kondisi Filter: Klausa WHERE digunakan untuk memfilter hasil berdasarkan nilai kolom nama.
 
-`WHERE nama= "raihan" : query SQL untuk mencari keberadaan data yang bernama "raihan" yang berada di dalam kolom `nama`.
+Kondisi nama="raihan" memastikan bahwa hanya baris-baris di mana nilai kolom nama adalah "raihan" yang akan disertakan dalam hasil.
+Eksekusi Query:
+
+Database mencari semua baris dalam tabel tantangan di mana nilai kolom nama adalah "raihan".
+Hanya nilai kolom nama yang sesuai dengan kondisi tersebut yang akan disertakan dalam hasil.
+Hasil Query: Hasil dari query ini akan mencakup semua nilai kolom nama di mana nilai adalah "raihan".
+
+Tujuan Query: Tujuan dari query ini adalah untuk mendapatkan daftar nama dari tabel tantangan di mana nama adalah "raihan". Ini berguna untuk mencari entri khusus dalam data dan mungkin digunakan untuk verifikasi, pemantauan, atau keperluan lainnya yang melibatkan identifikasi entitas dengan nama yang spesifik.
+
+
 
 ## Query
 
@@ -221,7 +284,7 @@ Query MySQL di atas digunakan untuk mengambil semua data dari tabel 'mobil' dima
 
 SELECT nama FROM tantangan
 
-    -> WHERE nama="REZKY AWALYA";
+    -> WHERE nama="raihan";
 
 ```
 
@@ -245,16 +308,21 @@ query MySQL "SELECT nama FROM tantangan WHERE nama='raihan';" digunakan untuk me
 **setelah kamu mengetikkan query diatas selanjutnya klik enter  maka akan muncul tampilan seperti yang di bawah ini yang berarti kamu telah berhasil:**
 ![h.select in.png](ASETBASISDATA/h.select%20in.png)
 ### Analisis
-Query MySQL di atas digunakan untuk mengambil data dari tabel 'mobil' dengan kondisi pencarian dimana warna mobil adalah 'silver' atau 'merah'.
+Perintah query MySQL SELECT * FROM mobil WHERE warna IN ('silver','merah'); digunakan untuk mengekstrak data dari tabel mobil di mana nilai kolom warna adalah 'silver' atau 'merah'. Berikut adalah analisis dari query tersebut:
 
-berikut analisis Query yang ada di select IN
+Pemilihan Semua Kolom: Query ini memilih semua kolom dari tabel mobil menggunakan SELECT *.
 
-**Adapun poin" yang dapat saya ambil adalah :**
-1. SELECT *: Mengambil semua kolom dari tabel 'mobil'.
-2. FROM mobil: Menentukan tabel yang akan diambil datanya, yaitu 'mobil'.
-3. WHERE warna IN ('silver', 'merah'): Menentukan kondisi pencarian dimana warna mobil harus 'silver' atau 'merah'.
+Kondisi Filter dengan IN: Klausa WHERE digunakan untuk memfilter hasil berdasarkan nilai kolom warna.
 
-Jadi, hasil dari query ini akan menampilkan semua data mobil yang memiliki warna 'silver' atau 'merah'.
+Kondisi warna IN ('silver','merah') memastikan bahwa hanya baris-baris di mana nilai kolom warna adalah 'silver' atau 'merah' yang akan disertakan dalam hasil.
+Eksekusi Query:
+
+Database mencari semua baris dalam tabel mobil di mana nilai kolom warna adalah 'silver' atau 'merah'.
+Semua kolom dari baris-baris yang memenuhi kondisi ini akan disertakan dalam hasil.
+Hasil Query: Hasil dari query ini akan mencakup semua data mobil (semua kolom) di mana nilai kolom warna adalah 'silver' atau 'merah'.
+
+Tujuan Query: Tujuan dari query ini adalah untuk mendapatkan daftar mobil dengan warna 'silver' atau 'merah'. Ini bisa digunakan untuk analisis, pelaporan, atau keperluan lainnya di mana informasi tentang mobil-mobil dengan warna tertentu diperlukan.
+
 ### Kesimpulan
 Query MySQL di atas digunakan untuk mengambil semua data dari tabel 'mobil' dimana warna mobil adalah 'silver' atau 'merah'. Ini berarti query tersebut akan menghasilkan daftar semua mobil yang memiliki warna 'silver' atau 'merah'.
 # Select IN+AND
@@ -275,18 +343,24 @@ Query MySQL di atas digunakan untuk mengambil semua data dari tabel 'mobil' dima
 **setelah kamu mengetikkan query diatas selanjutnya klik enter  maka akan muncul tampilan seperti yang di bawah ini yang berarti kamu telah berhasil:**
 ![h.select IN+AND.png](ASETBASISDATA/h.select%20IN+AND.png)
 ### Analisis
-Query MySQL di atas digunakan untuk mengambil data dari tabel 'mobil' dengan dua kondisi pencarian:
+Perintah query MySQL SELECT * FROM mobil WHERE warna IN ('HIAM', 'SILVER') AND harga_rental = 50000; digunakan untuk mengekstrak data dari tabel mobil di mana nilai kolom warna adalah 'HIAM' atau 'SILVER' dan nilai kolom harga_rental adalah 50000. Berikut adalah analisis dari query tersebut:
 
--  Warna mobil harus 'HITAM' atau 'SILVER'.
-- Harga rental mobil harus sama dengan 50,000.
+Pemilihan Semua Kolom: Query ini memilih semua kolom dari tabel mobil menggunakan SELECT *.
 
-**Adapun poin" yang dapat saya ambil adalah :**
--  SELECT *: Mengambil semua kolom dari tabel 'mobil'.
--  FROM mobil: Menentukan tabel yang akan diambil datanya, yaitu 'mobil'.
--  WHERE warna IN ('HITAM', 'SILVER'): Menentukan kondisi pencarian dimana warna mobil harus 'HITAM' atau 'SILVER'.
--  AND harga_rental = 50000: Menentukan kondisi pencarian dimana harga rental mobil harus sama dengan 50,000.
+Kondisi Filter dengan IN dan AND: Klausa WHERE digunakan untuk memfilter hasil berdasarkan dua kondisi yang dikombinasikan:
 
-Jadi, hasil dari query ini akan menampilkan semua data mobil yang memiliki warna 'HITAM' atau 'SILVER', dan harga rental mobil adalah 50,000.
+Kondisi pertama warna IN ('HIAM', 'SILVER') memastikan bahwa hanya baris-baris di mana nilai kolom warna adalah 'HIAM' atau 'SILVER' yang akan disertakan dalam hasil.
+Kondisi kedua harga_rental = 50000 memastikan bahwa hanya baris-baris di mana nilai kolom harga_rental adalah 50000 yang akan disertakan dalam hasil.
+Keduanya digabungkan dengan operator AND, sehingga hanya baris-baris yang memenuhi kedua kondisi tersebut yang akan disertakan dalam hasil.
+Eksekusi Query:
+
+Database mencari semua baris dalam tabel mobil di mana nilai kolom warna adalah 'HIAM' atau 'SILVER' dan nilai kolom harga_rental adalah 50000.
+Semua kolom dari baris-baris yang memenuhi kedua kondisi ini akan disertakan dalam hasil.
+Hasil Query: Hasil dari query ini akan mencakup semua data mobil (semua kolom) di mana nilai kolom warna adalah 'HIAM' atau 'SILVER' dan nilai kolom harga_rental adalah 50000.
+
+Tujuan Query: Tujuan dari query ini adalah untuk mendapatkan daftar mobil dengan warna 'HIAM' atau 'SILVER' dan harga rental sebesar 50000. Ini bisa digunakan untuk analisis, pelaporan, atau keperluan lainnya di mana informasi tentang mobil-mobil dengan kriteria tertentu diperlukan.
+
+
 ### Kesimpulan
 Query MySQL di atas digunakan untuk mengambil semua data dari tabel 'mobil' dimana warna mobil adalah 'HITAM' atau 'SILVER', dan harga rental mobil adalah 50,000. Ini berarti query tersebut akan menghasilkan daftar semua mobil yang memiliki warna 'HITAM' atau 'SILVER', dan harga rental mobil adalah 50,000.
 
@@ -308,18 +382,23 @@ Query MySQL di atas digunakan untuk mengambil semua data dari tabel 'mobil' dima
 **setelah kamu mengetikkan query diatas selanjutnya klik enter  maka akan muncul tampilan seperti yang di bawah ini yang berarti kamu telah berhasil:**
 ![h.select IN+OR.png](ASETBASISDATA/h.select%20IN+OR.png)
 ### Analisis
-Query MySQL di atas digunakan untuk mengambil data dari tabel 'mobil' dengan dua kondisi pencarian:
+Perintah query MySQL SELECT * FROM mobil WHERE warna IN ('HIAM', 'SILVER') OR harga_rental = 50000; digunakan untuk mengekstrak data dari tabel mobil di mana nilai kolom warna adalah 'HIAM' atau 'SILVER', atau nilai kolom harga_rental adalah 50000. Berikut adalah analisis dari query tersebut:
 
-1. Warna mobil harus 'HITAM' atau 'SILVER'.
-2. Harga rental mobil harus sama dengan 50,000.
+Pemilihan Semua Kolom: Query ini memilih semua kolom dari tabel mobil menggunakan SELECT *.
 
-**Adapun poin" yang dapat saya ambil adalah :**
-1. SELECT *: Mengambil semua kolom dari tabel 'mobil'.
-2. FROM mobil: Menentukan tabel yang akan diambil datanya, yaitu 'mobil'.
-3. WHERE warna IN ('HITAM', 'SILVER'): Menentukan kondisi pencarian dimana warna mobil harus 'HITAM' atau 'SILVER'.
-4. OR harga_rental = 50000: Menentukan kondisi pencarian dimana harga rental mobil harus sama dengan 50,000.
+Kondisi Filter dengan IN dan OR: Klausa WHERE digunakan untuk memfilter hasil berdasarkan dua kondisi yang dikombinasikan:
 
-Jadi, hasil dari query ini akan menampilkan semua data mobil yang memiliki warna 'HITAM' atau 'SILVER', serta semua mobil yang memiliki harga rental 50,000.
+Kondisi pertama warna IN ('HIAM', 'SILVER') memastikan bahwa hanya baris-baris di mana nilai kolom warna adalah 'HIAM' atau 'SILVER' yang akan disertakan dalam hasil.
+Kondisi kedua harga_rental = 50000 memastikan bahwa hanya baris-baris di mana nilai kolom harga_rental adalah 50000 yang akan disertakan dalam hasil.
+Keduanya digabungkan dengan operator OR, sehingga baris-baris yang memenuhi salah satu dari kedua kondisi tersebut akan disertakan dalam hasil.
+Eksekusi Query:
+
+Database mencari semua baris dalam tabel mobil di mana nilai kolom warna adalah 'HIAM' atau 'SILVER', atau nilai kolom harga_rental adalah 50000.
+Semua kolom dari baris-baris yang memenuhi setidaknya satu dari dua kondisi ini akan disertakan dalam hasil.
+Hasil Query: Hasil dari query ini akan mencakup semua data mobil (semua kolom) di mana nilai kolom warna adalah 'HIAM' atau 'SILVER', atau nilai kolom harga_rental adalah 50000.
+
+Tujuan Query: Tujuan dari query ini adalah untuk mendapatkan daftar mobil dengan warna 'HIAM' atau 'SILVER', atau harga rental sebesar 50000. Ini bisa digunakan untuk analisis, pelaporan, atau keperluan lainnya di mana informasi tentang mobil-mobil dengan kriteria tertentu diperlukan.
+
 ### Kesimpulan
 Query MySQL di atas digunakan untuk mengambil semua data dari tabel '`mobil`' dimana warna mobil adalah '`HITAM`' atau '`SILVER`', atau harga rental mobil adalah `50,000.` Ini berarti query tersebut akan menghasilkan daftar semua mobil yang memiliki warna `'HITAM'` atau `'SILVER'`, serta semua `mobil` yang memiliki harga rental `50,000.`
 # Select IN+AND+OPERATOR
@@ -345,6 +424,7 @@ select * from mobil
 ```
 
 ```mysql
+
 select * from mobil
      where warna in ('hitam','silver')
      AND harga_rental <100000;
@@ -356,16 +436,21 @@ setelah kamu mengetikkan query diatas selanjutnya klik enter  maka akan muncul t
 
 ![h.select in+and+operator.2.png](ASETBASISDATA/h.select%20in+and+operator.2.png)
 ## Analisis
-Query MySQL pertama digunakan untuk mengambil data dari tabel 'mobil' dengan dua kondisi pencarian:
+Pemilihan Semua Kolom: Kedua query ini memilih semua kolom dari tabel mobil menggunakan SELECT *.
 
-1. Warna mobil harus '`HITAM`' atau '`SILVER`'.
-2. Harga rental mobil harus kurang dari `100,000.`
+Kondisi Filter dengan IN dan AND: Klausa WHERE digunakan untuk memfilter hasil berdasarkan dua kondisi yang dikombinasikan:
 
-Berikut Poin-poin  penting dari analisis saya:
-1. SELECT *: Mengambil semua kolom dari tabel 'mobil'.
-2. FROM mobil: Menentukan tabel yang akan diambil datanya, yaitu 'mobil'.
-3. WHERE warna IN ('`hitam`', '`silver`'): Menentukan kondisi pencarian dimana warna mobil harus 'hitam' atau '`silver`'.
-4. AND harga_rental < `100000:` Menentukan kondisi pencarian dimana harga rental mobil harus kurang dari `100,000.`
+Kondisi pertama warna IN ('hitam','silver') memastikan bahwa hanya baris-baris di mana nilai kolom warna adalah 'hitam' atau 'silver' yang akan disertakan dalam hasil.
+Kondisi kedua harga_rental > 50000 pada query pertama dan harga_rental < 100000 pada query kedua memastikan bahwa hanya baris-baris di mana nilai kolom harga_rental lebih besar dari 50000 pada query pertama dan kurang dari 100000 pada query kedua yang akan disertakan dalam hasil.
+Keduanya digabungkan dengan operator AND, sehingga hanya baris-baris yang memenuhi kedua kondisi tersebut yang akan disertakan dalam hasil.
+Eksekusi Query:
+
+Database akan mencari semua baris dalam tabel mobil di mana nilai kolom warna adalah 'hitam' atau 'silver', dan nilai kolom harga_rental lebih besar dari 50000 pada query pertama atau kurang dari 100000 pada query kedua.
+Semua kolom dari baris-baris yang memenuhi kedua kondisi ini akan disertakan dalam hasil.
+Hasil Query: Hasil dari masing-masing query akan mencakup semua data mobil (semua kolom) di mana nilai kolom warna adalah 'hitam' atau 'silver', dan harga rentalnya sesuai dengan kondisi yang diberikan.
+
+Tujuan Query: Tujuan dari kedua query ini adalah untuk mendapatkan daftar mobil dengan warna 'hitam' atau 'silver' dan harga rentalnya lebih besar dari 50000 pada query pertama, atau kurang dari 100000 pada query kedua. Ini bisa digunakan untuk analisis, pelaporan, atau keperluan lainnya di mana informasi tentang mobil-mobil dengan kriteria tertentu diperlukan.
+
 
  
 ## Kesimpulan
@@ -390,13 +475,23 @@ select * from nama_tabel
 setelah kamu mengetikkan query diatas selanjutnya klik enter  maka akan muncul tampilan seperti yang di bawah ini yang berarti kamu telah berhasil:
 ![h.select like.png](ASETBASISDATA/h.select%20like.png)
 ## Analisis
-Select like berikut ini berfungsing untuk mencari semua data dari tabel "mobil" di mana kolom pemilik dimulai dengan awalan 'ib'. 
+Perintah query MySQL SELECT * FROM mobil WHERE pemilik LIKE "ib%"; digunakan untuk mengekstrak data dari tabel mobil di mana nilai kolom pemilik dimulai dengan karakter "ib". Berikut adalah analisis dari query tersebut:
 
-SELECT * FROM mobil: Ini adalah pernyataan SELECT yang memilih semua kolom dari tabel 'mobil'.
+Pemilihan Semua Kolom: Query ini memilih semua kolom dari tabel mobil menggunakan SELECT *.
 
-WHERE pemilik LIKE 'ib%': Ini adalah klausa WHERE yang digunakan untuk memfilter baris berdasarkan kondisi tertentu. Kondisi di sini adalah bahwa nilai kolom 'pemilik' harus dimulai dengan awalan 'ib'.
+Kondisi Filter dengan LIKE: Klausa WHERE digunakan untuk memfilter hasil berdasarkan pola pencarian dalam nilai kolom pemilik.
+
+Kondisi pemilik LIKE "ib%" menggunakan operator LIKE untuk mencocokkan nilai kolom pemilik yang dimulai dengan karakter "ib" dan diikuti oleh nol atau lebih karakter apa pun.
+Eksekusi Query:
+
+Database mencari semua baris dalam tabel mobil di mana nilai kolom pemilik dimulai dengan karakter "ib".
+Semua kolom dari baris-baris yang memenuhi kondisi ini akan disertakan dalam hasil.
+Hasil Query: Hasil dari query ini akan mencakup semua data mobil (semua kolom) di mana nilai kolom pemilik dimulai dengan karakter "ib".
+
+Tujuan Query: Tujuan dari query ini adalah untuk mendapatkan daftar mobil yang dimiliki oleh pemilik yang namanya dimulai dengan "ib". Ini bisa digunakan untuk melihat mobil-mobil yang dimiliki oleh pemilik tertentu atau untuk keperluan lain di mana informasi tentang pemilik dengan awalan nama tertentu diperlukan.
+
 ## Kesimpulan
-jadi kesimpulannnya adalah pengguna dapat di permudah untuk mencari suatu kolom dengan menggunakan query tersebut 
+Query ini efektif untuk menemukan mobil yang dimiliki oleh pemilik yang namanya dimulai dengan "ib" dari tabel mobil. Dengan menggunakan operator LIKE dan pola pencarian yang sesuai, query ini memberikan fleksibilitas dalam mengekstrak data yang memenuhi kriteria pencarian yang spesifik.
 
 # Select Like Mencari Akhiran
 
@@ -414,11 +509,21 @@ select * from nama_tabel
 setelah kamu mengetikkan query diatas selanjutnya klik enter  maka akan muncul tampilan seperti yang di bawah ini yang berarti kamu telah berhasil:
 ![h.select like 2.png](ASETBASISDATA/h.select%20like%202.png)
 ## Analisis
-sama seperti select di atas namun perbedaannya Query tersebut mencari semua data dari tabel "mobil" di mana kolom pemilik dimulai dengan akhiran 'm'.
+Perintah query MySQL SELECT * FROM mobil WHERE pemilik LIKE "%m"; digunakan untuk mengekstrak data dari tabel mobil di mana nilai kolom pemilik berakhir dengan karakter "m". Berikut adalah analisis dari query tersebut:
 
-SELECT * FROM mobil: Ini adalah pernyataan SELECT yang memilih semua kolom dari tabel 'mobil'.
+Pemilihan Semua Kolom: Query ini memilih semua kolom dari tabel mobil menggunakan SELECT *.
 
-WHERE pemilik LIKE '%m': Ini adalah klausa WHERE yang digunakan untuk memfilter baris berdasarkan kondisi tertentu. Kondisi di sini adalah bahwa nilai kolom 'pemilik' harus Akhiran dengan awalan 'm'.
+Kondisi Filter dengan LIKE: Klausa WHERE digunakan untuk memfilter hasil berdasarkan pola pencarian dalam nilai kolom pemilik.
+
+Kondisi pemilik LIKE "%m" menggunakan operator LIKE untuk mencocokkan nilai kolom pemilik yang berakhir dengan karakter "m".
+Tanda persen % dalam pola pencarian %m berarti nol atau lebih karakter apapun sebelum karakter "m".
+Eksekusi Query:
+
+Database mencari semua baris dalam tabel mobil di mana nilai kolom pemilik berakhir dengan karakter "m".
+Semua kolom dari baris-baris yang memenuhi kondisi ini akan disertakan dalam hasil.
+Hasil Query: Hasil dari query ini akan mencakup semua data mobil (semua kolom) di mana nilai kolom pemilik berakhir dengan karakter "m".
+
+Tujuan Query: Tujuan dari query ini adalah untuk mendapatkan daftar mobil yang dimiliki oleh pemilik yang namanya berakhir dengan "m". Ini bisa digunakan untuk melihat mobil-mobil yang dimiliki oleh pemilik tertentu atau untuk keperluan lain di mana informasi tentang pemilik dengan akhiran nama tertentu diperlukan.
 
 ## Kesimpulan
 - Program ini akan mengembalikan semua baris dari tabel "`mobil`" di mana nilai dalam kolom "pemilik" diakhiri dengan huruf '`m`'. Karakter apa pun dapat muncul sebelum huruf '`m`' karena wildcard '`%`' akan cocok dengan nol atau lebih karakter sebelumnya. 
@@ -440,13 +545,21 @@ select * from nama_tabel
 setelah kamu mengetikkan query diatas selanjutnya klik enter  maka akan muncul tampilan seperti yang di bawah ini yang berarti kamu telah berhasil:
 ![h.select like3.png](ASETBASISDATA/h.select%20like3.png)
 ## Analisis
-1. SELECT * FROM mobil`: Perintah ini memilih semua kolom dari tabel  bernama "mobil". 
-2. `WHERE pemilik LIKE 'b%m'`: Ini adalah klausul WHERE yang digunakan untuk memfilter baris berdasarkan pola tertentu di dalam kolom "pemilik". 
-- `pemilik`: Merupakan nama kolom yang akan diperiksa. - `LIKE`: Operator ini digunakan untuk mencocokkan nilai kolom dengan pola tertentu. 
-- `'b%m'`: Ini adalah pola yang ingin dicocokkan. 
-- `'b'`: Menyatakan bahwa nilai harus diawali dengan huruf '`b`'. 
-- `'%'`: Adalah wildcard yang cocok dengan nol atau lebih karakter apa pun.
-- `'m'`: Menyatakan bahwa nilai harus diakhiri dengan huruf '`m`'.
+Perintah query MySQL SELECT * FROM mobil WHERE pemilik LIKE "b%m"; digunakan untuk mengekstrak data dari tabel mobil di mana nilai kolom pemilik dimulai dengan karakter "b", diikuti oleh nol atau lebih karakter apa pun, dan diakhiri dengan karakter "m". Berikut adalah analisis dari query tersebut:
+
+Pemilihan Semua Kolom: Query ini memilih semua kolom dari tabel mobil menggunakan SELECT *.
+
+Kondisi Filter dengan LIKE: Klausa WHERE digunakan untuk memfilter hasil berdasarkan pola pencarian dalam nilai kolom pemilik.
+
+Kondisi pemilik LIKE "b%m" menggunakan operator LIKE untuk mencocokkan nilai kolom pemilik yang sesuai dengan pola tertentu.
+Pola b%m berarti nilai kolom pemilik harus dimulai dengan karakter "b", diikuti oleh nol atau lebih karakter apa pun (dilambangkan dengan %), dan diakhiri dengan karakter "m".
+Eksekusi Query:
+
+Database mencari semua baris dalam tabel mobil di mana nilai kolom pemilik sesuai dengan pola b%m.
+Semua kolom dari baris-baris yang memenuhi kondisi ini akan disertakan dalam hasil.
+Hasil Query: Hasil dari query ini akan mencakup semua data mobil (semua kolom) di mana nilai kolom pemilik dimulai dengan "b" dan diakhiri dengan "m".
+
+Tujuan Query: Tujuan dari query ini adalah untuk mendapatkan daftar mobil yang dimiliki oleh pemilik yang namanya dimulai dengan "b" dan diakhiri dengan "m". Ini bisa digunakan untuk melihat mobil-mobil yang dimiliki oleh pemilik tertentu atau untuk keperluan lain di mana informasi tentang pemilik dengan pola nama tertentu diperlukan.
 
 ## Kesimpulan
 Program ini akan mengembalikan semua baris dari tabel "mobil" di mana nilai dalam kolom "pemilik" dimulai dengan huruf '`b`' dan diakhiri dengan huruf '`m`', dengan jumlah karakter apa pun di antaranya. 
@@ -482,30 +595,41 @@ setelah kamu mengetikkan query diatas selanjutnya klik enter  maka akan muncul t
 
 ![h.select mbtk 2.png](ASETBASISDATA/h.select%20mbtk%202.png)
 
-## Analisis
-1. `SELECT * FROM mobil`: Perintah ini memilih semua kolom dari tabel bernama "mobil".
-    
-2. `WHERE pemilik LIKE 'i__'`: Ini adalah klausul WHERE yang digunakan untuk menentukan baris berdasarkan pola tertentu di dalam kolom "pemilik".
-    
-    - `pemilik`: Merupakan nama kolom yang akan diperiksa.
-    - `LIKE`: Operator ini digunakan untuk mencocokkan nilai kolom dengan pola tertentu.
-    - `'i__'`: Ini adalah pola yang ingin dicocokkan.
-        - `'i'`: Menyatakan bahwa nilai harus dimulai dengan huruf 'i'.
-        - `'__'`: Adalah wildcard yang cocok dengan tepat dua karakter setelah huruf 'i'.
-## Analisis
-1. `SELECT * FROM mobil`: Perintah ini memilih semua kolom dari tabel bernama "mobil".
-    
-2. `WHERE pemilik LIKE '____'`: Ini adalah klausul WHERE yang digunakan untuk memfilter baris berdasarkan pola tertentu di dalam kolom "pemilik".
-    
-    - `pemilik`: Merupakan nama kolom yang akan diperiksa.
-    - `LIKE`: Operator ini digunakan untuk mencocokkan nilai kolom dengan pola tertentu.
-    - `'____'`: Ini adalah pola yang ingin dicocokkan.
-        - `'____'`: Adalah wildcard yang cocok dengan tepat empat karakter.
-## Kesimpulan
-- Program ini akan mengembalikan semua baris dari tabel "mobil" di mana nilai dalam kolom "pemilik" dimulai dengan huruf '`i`' dan terdiri dari dua karakter tambahan setelahnya. Wildcard `__` akan cocok dengan dua karakter apa pun di posisi tersebut.
+## Analisis pertama
+Pemilihan Semua Kolom: Query ini memilih semua kolom dari tabel mobil menggunakan SELECT *.
+
+Kondisi Filter dengan LIKE: Klausa WHERE digunakan untuk memfilter hasil berdasarkan pola pencarian dalam nilai kolom pemilik.
+
+Kondisi pemilik LIKE 'i__' menggunakan operator LIKE untuk mencocokkan nilai kolom pemilik yang sesuai dengan pola tertentu.
+Pola i__ berarti nilai kolom pemilik harus dimulai dengan karakter 'i' dan diikuti oleh tepat dua karakter apa pun (dilambangkan dengan _).
+Eksekusi Query:
+
+Database mencari semua baris dalam tabel mobil di mana nilai kolom pemilik dimulai dengan karakter 'i' dan diikuti oleh tepat dua karakter apa pun.
+Semua kolom dari baris-baris yang memenuhi kondisi ini akan disertakan dalam hasil.
+Hasil Query: Hasil dari query ini akan mencakup semua data mobil (semua kolom) di mana nilai kolom pemilik terdiri dari tiga karakter dan dimulai dengan 'i'.
+## Analisis kedua
+Pemilihan Semua Kolom: Query ini memilih semua kolom dari tabel mobil menggunakan SELECT *.
+
+Kondisi Filter dengan LIKE: Klausa WHERE digunakan untuk memfilter hasil berdasarkan pola pencarian dalam nilai kolom pemilik.
+
+Kondisi pemilik LIKE '____' menggunakan operator LIKE untuk mencocokkan nilai kolom pemilik yang sesuai dengan pola tertentu.
+Pola ____ berarti nilai kolom pemilik harus terdiri dari tepat empat karakter (dilambangkan dengan empat karakter underscore _).
+Eksekusi Query:
+
+Database mencari semua baris dalam tabel mobil di mana nilai kolom pemilik terdiri dari tepat empat karakter.
+Semua kolom dari baris-baris yang memenuhi kondisi ini akan disertakan dalam hasil.
+Hasil Query: Hasil dari query ini akan mencakup semua data mobil (semua kolom) di mana nilai kolom pemilik terdiri dari tepat empat karakter.
+
+Kesimpulan:
+Query ini digunakan untuk menemukan mobil yang dimiliki oleh pemilik yang namanya terdiri dari tepat empat karakter. Dengan menggunakan operator LIKE dan pola pencarian yang spesifik, query ini memberikan fleksibilitas dalam mengekstrak data yang memenuhi kriteria pencarian yang spesifik.
 
 ## Kesimpulan
-- Program ini akan mengembalikan semua baris dari tabel "mobil" di mana nilai dalam kolom "pemilik" terdiri tepat dari empat karakter.
+Query Pertama: Digunakan untuk menemukan baris di mana nilai kolom pemilik dimulai dengan 'i' dan memiliki tepat dua karakter tambahan (total tiga karakter).
+Query Kedua: Digunakan untuk menemukan baris di mana nilai kolom pemilik terdiri dari tepat empat karakter.
+Kedua query ini sangat berguna untuk mengidentifikasi dan mengekstrak data berdasarkan panjang dan pola spesifik dalam kolom pemilik.
+
+Kedua query ini sangat berguna untuk mengidentifikasi dan mengekstrak data berdasarkan panjang dan pola spesifik dalam kolom pemilik.
+
 # Select like Kombinasi
 
 ## Struktur
@@ -536,30 +660,39 @@ setelah kamu mengetikkan query diatas selanjutnya klik enter  maka akan muncul t
 
 ![h.select kombinasi 2.png](ASETBASISDATA/h.select%20kombinasi%202.png)
 
-## Analisis
-1. `SELECT * FROM mobil`: Perintah ini memilih semua kolom dari tabel bernama "mobil". 
-2. `WHERE pemilik LIKE '__r%'`: Ini adalah klausul WHERE yang digunakan untuk memfilter baris berdasarkan pola tertentu di dalam kolom "pemilik".
-- `pemilik`: Merupakan nama kolom yang akan diperiksa. 
-- `LIKE`: Operator ini digunakan untuk mencocokkan nilai kolom dengan pola tertentu. 
-- `'__r%'`: Ini adalah pola yang ingin dicocokkan.
-     - `'__'`: Adalah wildcard yang cocok dengan tepat dua karakter. 
-    - `'r'`: Menyatakan bahwa karakter ketiga harus tepat 'r'. 
-        - `'%'`: Adalah wildcard yang cocok dengan nol atau lebih karakter apa pun setelah 'r'.
-## Analisis
-1. `SELECT * FROM mobil`: Perintah ini memilih semua kolom dari tabel bernama "mobil".
-2. `WHERE pemilik LIKE '_b%'`: Ini adalah klausul WHERE yang digunakan untuk memfilter baris berdasarkan pola tertentu di dalam kolom "pemilik".
-- `pemilik`: Merupakan nama kolom yang akan diperiksa.
-- `LIKE`: Operator ini digunakan untuk mencocokkan nilai kolom dengan pola tertentu. 
-- `'_b%'`: Ini adalah pola yang ingin dicocokkan. 
-     - `'_'`: Adalah wildcard yang cocok dengan tepat satu karakter. 
-        - `'b%'`: Menyatakan bahwa nilai harus dimulai dengan huruf 'b' di posisi kedua.
+## Analisis Pertama
+Pemilihan Semua Kolom: Query ini memilih semua kolom dari tabel mobil menggunakan SELECT *.
+
+Kondisi Filter dengan LIKE: Klausa WHERE digunakan untuk memfilter hasil berdasarkan pola pencarian dalam nilai kolom pemilik.
+
+Kondisi pemilik LIKE '__r%' menggunakan operator LIKE untuk mencocokkan nilai kolom pemilik yang sesuai dengan pola tertentu.
+Pola __r% berarti nilai kolom pemilik harus memiliki tepat dua karakter apa pun, diikuti oleh karakter 'r', dan kemudian diikuti oleh nol atau lebih karakter apa pun.
+Eksekusi Query:
+
+Database mencari semua baris dalam tabel mobil di mana nilai kolom pemilik memiliki tepat dua karakter apa pun, diikuti oleh karakter 'r', dan kemudian diikuti oleh nol atau lebih karakter.
+Semua kolom dari baris-baris yang memenuhi kondisi ini akan disertakan dalam hasil.
+Hasil Query: Hasil dari query ini akan mencakup semua data mobil (semua kolom) di mana nilai kolom pemilik memiliki tepat dua karakter diikuti oleh karakter 'r'.
+
+
+## Analisis kedua
+Pemilihan Semua Kolom: Query ini memilih semua kolom dari tabel mobil menggunakan SELECT *.
+
+Kondisi Filter dengan LIKE: Klausa WHERE digunakan untuk memfilter hasil berdasarkan pola pencarian dalam nilai kolom pemilik.
+
+Kondisi pemilik LIKE '_b%' menggunakan operator LIKE untuk mencocokkan nilai kolom pemilik yang sesuai dengan pola tertentu.
+Pola _b% berarti nilai kolom pemilik harus memiliki tepat satu karakter apa pun, diikuti oleh karakter 'b', dan kemudian diikuti oleh nol atau lebih karakter apa pun.
+Eksekusi Query:
+
+Database mencari semua baris dalam tabel mobil di mana nilai kolom pemilik memiliki tepat satu karakter apa pun, diikuti oleh karakter 'b', dan kemudian diikuti oleh nol atau lebih karakter.
+Semua kolom dari baris-baris yang memenuhi kondisi ini akan disertakan dalam hasil.
+Hasil Query: Hasil dari query ini akan mencakup semua data mobil (semua kolom) di mana nilai kolom pemilik memiliki tepat satu karakter diikuti oleh karakter 'b'.
 
 ## Kesimpulan
-- Program ini akan mengembalikan semua baris dari tabel "mobil" di mana nilai dalam kolom "pemilik" terdiri tepat dari dua karakter di awal, diikuti oleh karakter 'r', dan kemudian diikuti oleh nol atau lebih karakter apa pun.
-- Misalnya, ini akan mencocokkan nilai seperti "mari", "bros", "kura", dan seterusnya, dengan asumsi bahwa tidak ada batasan lebih lanjut pada panjang nama setelah karakter 'r'.
-## Kesimpulan
-- Program ini akan mengembalikan semua baris dari tabel "mobil" di mana nilai dalam kolom "pemilik" dimulai dengan huruf 'b' di posisi kedua, dengan jumlah karakter apa pun sebelumnya. 
-- Misalnya, ini akan mencocokkan nilai seperti "abi", "budi", "bola", dan seterusnya.
+Query Pertama: Digunakan untuk menemukan baris di mana nilai kolom pemilik memiliki dua karakter awal diikuti oleh karakter 'r'.
+
+Query Kedua: Digunakan untuk menemukan baris di mana nilai kolom pemilik memiliki satu karakter awal diikuti oleh karakter 'b'.
+
+Kedua query ini sangat berguna untuk mengidentifikasi dan mengekstrak data berdasarkan pola spesifik dalam kolom pemilik.
 # Select like NOT LIKE
 ## Struktur
 ```mysql
