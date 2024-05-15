@@ -1119,6 +1119,7 @@ SELECT SUM(harga_rental) FROM mobil;
 ```
 
 ### Hasil
+**setelah kamu mengetikkan query diatas selanjutnya klik enter  maka akan muncul tampilan seperti yang di bawah ini yang berarti kamu telah berhasil:**
 ![h.sum.jpg.png](ASETBASISDATA/h.sum.jpg.png)
   
 
@@ -1155,6 +1156,7 @@ SELECT COUNT(pemilik) FROM mobil;
 ```
 
 ### Hasil
+**setelah kamu mengetikkan query diatas selanjutnya klik enter  maka akan muncul tampilan seperti yang di bawah ini yang berarti kamu telah berhasil:**
 ![h.count.png](ASETBASISDATA/h.count.png)
   
 
@@ -1192,6 +1194,7 @@ SELECT MIN(harga_rental) AS MINIMAL FROM mobil;
 ```
 
 ### Hasil
+**setelah kamu mengetikkan query diatas selanjutnya klik enter  maka akan muncul tampilan seperti yang di bawah ini yang berarti kamu telah berhasil:**
 ![h.min.png](ASETBASISDATA/h.min.png)
   
 
@@ -1229,6 +1232,7 @@ SELECT MAX(harga_rental) AS MAXIMAL FROM mobil;
 ```
 
 ### Hasil
+**setelah kamu mengetikkan query diatas selanjutnya klik enter  maka akan muncul tampilan seperti yang di bawah ini yang berarti kamu telah berhasil:**
 ![h.max.png](ASETBASISDATA/h.max.png)
   
 
@@ -1266,6 +1270,7 @@ SELECT AVG(harga_rental) AS RATA_RATA FROM mobil;
 ```
 
 ### Hasil
+**setelah kamu mengetikkan query diatas selanjutnya klik enter  maka akan muncul tampilan seperti yang di bawah ini yang berarti kamu telah berhasil:**
 ![h.avg.png](ASETBASISDATA/h.avg.png)
   
 
