@@ -30,7 +30,8 @@ select warna,pemilik from mobil where warna="HITAM" and pemilik='Ibrahim'
 **setelah kamu mengetikkan query diatas selanjutnya klik enter  maka akan muncul tampilan seperti yang di bawah ini yang berarti kamu telah berhasil:**
 ![h.select and.png](ASETBASISDATA/h.select%20and.png)
 ### Analisis
-analisis kode Query 
+analisis kode Query
+ 
 SELECT warna, pemilik: Bagian ini menentukan kolom-kolom yang akan diambil dari tabel. Dalam hal ini, kolom "warna" dan "pemilik" akan diambil dari tabel "mobil".
 
 FROM mobil: Bagian ini menentukan tabel dari mana data akan diambil, yaitu tabel "mobil".
