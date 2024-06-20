@@ -289,8 +289,8 @@ SELECT nama FROM tantangan
 ```
 
 ## Hasil
-![akun](akun)
-![akun2](akun)
+![akun.png](akun.png)
+![akun2.png](akun.png)
 
 ## Kesimpulan
 query MySQL "SELECT nama FROM tantangan WHERE nama='raihan';" digunakan untuk memilih nama dari tabel `tantangan` di mana nilainya sama dengan "raihan". Ini merupakan contoh penggunaan klausa `WHERE` untuk melakukan filtrasi data berdasarkan kriteria tertentu. Hasilnya akan berupa nama dari baris-baris yang memenuhi kondisi yang ditentukan. 
