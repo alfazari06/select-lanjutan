@@ -1472,4 +1472,41 @@ SELECT AVG(harga_rental) AS RATA_RATA FROM mobil;
 ### Kesimpulan
 Kesimpulannya, query MySQL "SELECT AVG(harga_rental) AS RATA_RATA FROM mobil;" digunakan untuk menghitung rata-rata harga rental dari semua mobil yang tersedia dalam tabel `mobil`. Ini adalah contoh penggunaan fungsi agregat `AVG()` untuk menghitung nilai rata-rata dari nilai-nilai dalam kolom tertentu. Hasilnya akan berupa rata-rata harga rental dari semua mobil dalam tabel, dengan nama alias "RATA_RATA".
   
+# Relesi
 
+##  Struktur Pegawai
+![stru.pegawai.png](ASETBASISDATA/stru.pegawai.png)
+
+## Data Pengawai
+![h.pegawai.png](ASETBASISDATA/h.pegawai.png)
+
+### Before
+![before.png](ASETBASISDATA/before.png)
+
+### After
+![after.png](ASETBASISDATA/after.png)
+
+
+# Cabang
+
+## Before
+![before.cabang.png](ASETBASISDATA/before.cabang.png)
+
+## After
+![after.cabang.png](ASETBASISDATA/after.cabang.png)
+
+# Relasi 
+![h.relasi2.png](ASETBASISDATA/h.relasi2.png)
+
+![h.hasil.png](ASETBASISDATA/h.hasil.png)
+
+## Kode Program
+```mysql
+[SELECT] s.nama AS Nama_Siswa, n.nilai AS Nilai FROM nilai AS n INNER JOIN siswa AS s ON s.nis = n.nis_siswa WHERE n.nilai > 75;
+```
+
+Berdasarkan Query ini Tampilkan jumlah data mobil dan kelompokan berdasarkan warnanya
+
+Berdasarkan Query ini Tampilkan yang lebih besar dari 3 atau sama dengan 3 Pemiliknya mobilnya
+
+Tampilkan semua pemilik dengan jumlah mobilnya yang memiliki atau sama dengan 3 mobil 
